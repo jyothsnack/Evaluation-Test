@@ -1,0 +1,12 @@
+<html>
+	<body>
+		<h1>Stocks</h1>
+		<ul>
+		{% for item in stockNames %}
+		<li>
+		<a href="/stock-details/{{item}}/">{{item}}</a>
+		</li><br/>
+		{% endfor %}
+		<ul>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+	<style type="text/css">
+		td, th{
+			border: 1px solid ;
+		}
+	</style>
+	<body>
+		<h1>Stock Details : {{stockName}}</h1>
+		<table style="min-width: 500px;">
+			<tr>
+				<th>Date</th>
+				<th>Open</th>
+				<th>Close</th>
+				<th>% Change</th>
+			</tr>
+			{% for item in stockDetails %}
+				<tr>
+					<td>{{item.stock_date}}</td>
+					<td>{{item.stock_open}}</td>
+					<td>{{item.stock_close}}</td>
+					<td>{{item.stock_percent}}</td>
+				</tr>
+			{% endfor %}
+
+		</table>
+		<h1>Top 5 volumes of {{stockName}}</h1>
+		<table style="min-width: 500px;">
+			<tr>
+				<th>Date</th>
+				<th>Volume</th>
+			</tr>
+			{% for top in topFive %}
+				<tr>
+					<td>{{top.stock_date}}</td>
+					<td>{{top.stock_volume}}</td>
+				</tr>
+			{% endfor %}
+
+		</table>
+	</body>
+</html>
